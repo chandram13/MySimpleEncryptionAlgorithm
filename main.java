@@ -1,12 +1,12 @@
 // Marvish Chandra
 
-SYMBOLS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
 
 public class encryption{
     public static void chooseSecurity(){
     while True:
     System.out.printIn("You will choose to encrypt or decrypt.");
-    response = input("">"");
+    response = input(">");
     response.toLowerCase();
     if response == "e":
     mode = "encrypt";
@@ -26,6 +26,7 @@ public class encryption{
         break;
     }
     public static void chooseEncryption(message){
+    SYMBOLS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
     System.out.printIn("Choose the message to {}.".format(mode));
     message = message.UpperCase();
     translated = ""
