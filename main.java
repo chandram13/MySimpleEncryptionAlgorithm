@@ -25,23 +25,23 @@ public class encryption{
         key = int(response)
         break;
     }
-    public static void chooseEncryption(message){
+    public static void chooseEncryption(givenMessage){
     SYMBOLS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
     System.out.printIn("Choose the message to {}.".format(mode));
-    message = message.UpperCase();
-    translated = ""
-    for symbol in message:
+    givenMessage = givenMessage.UpperCase();
+    translatedMessage = ""
+    for symbol in givenMessage:
         if symbol in SYMBOLS:
-            num = SYMBOLS.length(symbol);
+            symNum = SYMBOLS.length(symbol);
             if mode == "encrypt":
-                num = num + key;
+                symNum = symNum + key;
             else if mode == "decrypt":
-                num = num - key;
-            if num >= SYMBOLS.length:
-                num = num - SYMBOLS.length;
-            else if num < 0:
-                num = num + SYMBOLS.length;
-            translated = translated + SYMBOLS[num];
+                symNum = symNum - key;
+            if symNum >= SYMBOLS.length:
+                symNum = symNum - SYMBOLS.length;
+            else if symNum < 0:
+                symNum = symNum + SYMBOLS.length;
+            translated = translated + SYMBOLS[symNum];
         else: translated = translated + symbol;
     // Show the resulted encrypted or decrypted message
     System.out.printIn(translated);
